@@ -1,4 +1,5 @@
 import os
+from dotenv import load_dotenv
 import discord
 from discord.ext import commands, tasks
 from discord import app_commands
@@ -18,6 +19,7 @@ from functools import wraps
 # =========================================================
 # AuraBot V42 — Hébergement cloud sécurisé (token via variable d’environnement)
 
+load_dotenv()
 TOKEN = os.getenv("DISCORD_TOKEN", "").strip()
 DB_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "aura_bot.db")
 
